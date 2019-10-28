@@ -19,8 +19,8 @@ public class Calculate {
         return result;
     }
 
-    private int operationNumberInt(ArrayList<Integer> numbers) {
-        int result = numbers.get(0);
+    private float operationNumberInt(ArrayList<Integer> numbers) {
+        float result = numbers.get(0);
         switch (arithmeticExpression.getOperation()) {
             case "+":
                 for (int i = 1; i < numbers.size(); i++)
@@ -48,7 +48,7 @@ public class Calculate {
             numbers.add(Util.transferRomeInArabNumber(s));
         }
         // Произведем операцию с арабскими числами
-        int result = operationNumberInt(numbers);
+        int result = (int)operationNumberInt(numbers);
         // Переведем арабские в римские
         return transferIntInRome(result);
     }
